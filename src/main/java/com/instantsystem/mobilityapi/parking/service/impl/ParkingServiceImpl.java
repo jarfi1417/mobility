@@ -141,14 +141,17 @@ public class ParkingServiceImpl implements ParkingService {
      * information
      * @return the full parkings with details and availability information when
      * available
-     * @throws MobilityNotValidException if an error occured validating the
-     * coordinates
+     * @throws MobilityException if an error occured
      */
     private List<Parking> getFullParkingInfo(
             String fromLatitude,
             String fromLongitude,
             List<Parking> allParkingsWithDetails,
-            List<Parking> allParkingsAvailabilityInfo) throws MobilityNotValidException {
+            List<Parking> allParkingsAvailabilityInfo) throws MobilityException {
+
+        if (CollectionUtils.isEmpty(allParkingsWithDetails) || CollectionUtils.isEmpty(allParkingsAvailabilityInfo)) {
+            throw new MobilityException("An error occurred with the lists of parkings data");
+        }
 
         // Merge the two data sets in one with the needed information
         List<Parking> mergedParkings = Stream

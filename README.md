@@ -3,8 +3,8 @@ Mobility Java API
 
 ## Description
 
-Cette API gère la mobilité du client selon sa position géographique.
-Plus spécifiquement ici, ce sera obtenir la liste des parkings à proximité.
+Cette API gère l'aide à la mobilité de l'utilisateur selon sa position géographique.
+Plus spécifiquement ici, ce sera obtenir la liste des parkings à proximité de sa position géographique.
 
 
 ## Details techniques
@@ -17,6 +17,7 @@ Plus spécifiquement ici, ce sera obtenir la liste des parkings à proximité.
 * Eclemma (Code coverage)
 * MoreUnit
 * Mapstruct
+* Git
 
 ## Prérequis:
 
@@ -30,6 +31,8 @@ Clone the repository
 ```
 git clone https://github.com/jarfi1417/mobility.git
 ```
+
+Rajouter si cela n'est pas déjà fait dans le classpath : "target/generated-sources/annotations"
 
 Compiler et lancer les tests unitaires et d'intégrations
 ```
