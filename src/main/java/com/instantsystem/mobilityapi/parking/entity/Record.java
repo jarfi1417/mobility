@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 /**
- * Entity that represents the a parking record data
+ * Entity that represents the parking record data
  * 
  * @author jearfi
  */
